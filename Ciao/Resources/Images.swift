@@ -9,6 +9,9 @@ import UIKit
 
 enum Images {
     case logo
+    case fork
+    case spoon
+    case circle
 
     // MARK: - Images
 
@@ -20,6 +23,12 @@ enum Images {
         switch self {
         case .logo:
             return "Logo"
+        case .fork:
+            return "Fork"
+        case .spoon:
+            return "Spoon"
+        case .circle:
+            return "Circle"
         }
     }
 
