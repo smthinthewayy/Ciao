@@ -21,18 +21,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYe-uw-aSp">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="2tq-uh-TN1">
-                                        <rect key="frame" x="106.66666666666669" y="300" width="180" height="180"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="oyp-Ff-MdH">
+                                        <rect key="frame" x="126.66666666666669" y="320" width="140" height="140"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="180" id="Ga3-Ag-49f"/>
-                                            <constraint firstAttribute="height" constant="180" id="hSe-rC-VdT"/>
+                                            <constraint firstAttribute="height" constant="140" id="62t-xt-Krv"/>
+                                            <constraint firstAttribute="width" constant="140" id="VKB-DE-HWw"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" name="Light-Lime-Green"/>
                                 <constraints>
-                                    <constraint firstItem="2tq-uh-TN1" firstAttribute="centerX" secondItem="SYe-uw-aSp" secondAttribute="centerX" id="7a1-Qw-M55"/>
-                                    <constraint firstItem="2tq-uh-TN1" firstAttribute="centerY" secondItem="SYe-uw-aSp" secondAttribute="centerY" constant="-36" id="Elp-As-WNQ"/>
+                                    <constraint firstItem="oyp-Ff-MdH" firstAttribute="centerY" secondItem="SYe-uw-aSp" secondAttribute="centerY" constant="-36" id="7S4-OQ-EXp"/>
+                                    <constraint firstItem="oyp-Ff-MdH" firstAttribute="centerX" secondItem="SYe-uw-aSp" secondAttribute="centerX" id="XDa-cR-Bak"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -52,9 +52,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="179" height="180"/>
+        <image name="Logo" width="140" height="140"/>
         <namedColor name="Light-Lime-Green">
-            <color red="0.83921568627450982" green="0.99607843137254903" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.83899998664855957" green="0.99599999189376831" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

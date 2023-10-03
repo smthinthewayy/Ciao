@@ -86,14 +86,14 @@ class SplashScreenViewController: UIViewController {
             circleImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             circleImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -36),
 
-            forkImage.widthAnchor.constraint(equalToConstant: 28),
-            spoonImage.widthAnchor.constraint(equalToConstant: 32.7),
+            forkImage.widthAnchor.constraint(equalToConstant: 29),
+            spoonImage.widthAnchor.constraint(equalToConstant: 33),
 
             forkImage.leftAnchor.constraint(equalTo: circleView.leftAnchor, constant: 17),
-            forkImage.centerYAnchor.constraint(equalTo: circleView.centerYAnchor, constant: 22),
+            forkImage.topAnchor.constraint(equalTo: circleView.topAnchor, constant: 36),
 
-            spoonImage.leftAnchor.constraint(equalTo: forkImage.rightAnchor, constant: 10),
-            spoonImage.centerYAnchor.constraint(equalTo: forkImage.centerYAnchor),
+            spoonImage.leftAnchor.constraint(equalTo: forkImage.rightAnchor, constant: 9),
+            spoonImage.topAnchor.constraint(equalTo: forkImage.topAnchor),
 
             appNameLabel.topAnchor.constraint(equalTo: circleView.bottomAnchor, constant: 20),
             appNameLabel.centerXAnchor.constraint(equalTo: circleView.centerXAnchor),
