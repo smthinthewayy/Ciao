@@ -17,25 +17,30 @@ protocol SplashScreenPresenterDescription {
 // MARK: - SplashScreenPresenter
 
 final class SplashScreenPresenter: SplashScreenPresenterDescription {
-    private lazy var animator: SplashScreenAnimatorDescription = SplashScreenAnimator(foregroundSplashWindow: foregroundSplashWindow, backgroundSplashWindow: backgroundSplashWindow)
-    
-    private lazy var foregroundSplashWindow: UIWindow = {
-        return splashWindow(level: .normal + 1, rootViewController: SplashScreenViewController())
-    }()
-    
-    private lazy var backgroundSplashWindow: UIWindow = {
-        return splashWindow(level: .normal - 1, rootViewController: SplashScreenViewController())
-    }()
-    
-    private func splashWindow(level: UIWindow.Level, rootViewController: SplashScreenViewController ) -> UIWindow {
+    // MARK: - Properties
+
+    private lazy var animator: SplashScreenAnimatorDescription = SplashScreenAnimator(
+        foregroundSplashWindow: foregroundSplashWindow,
+        backgroundSplashWindow: backgroundSplashWindow
+    )
+
+    private lazy var foregroundSplashWindow: UIWindow = splashWindow(level: .normal + 1, rootViewController: SplashScreenViewController())
+
+    private lazy var backgroundSplashWindow: UIWindow = splashWindow(level: .normal - 1, rootViewController: SplashScreenViewController())
+
+    // MARK: - Setup
+
+    private func splashWindow(level: UIWindow.Level, rootViewController: SplashScreenViewController) -> UIWindow {
         let splashWindow = UIWindow(frame: UIScreen.main.bounds)
         splashWindow.windowLevel = level
         splashWindow.rootViewController = rootViewController
         return splashWindow
     }
 
+    // MARK: - Methods
+
     func present() {
-        animator.animateApperance()
+        animator.animateAppearance()
     }
 
     func dismiss(completion: (() -> Void)?) {

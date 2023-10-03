@@ -8,13 +8,15 @@
 import UIKit
 
 class SplashScreenViewController: UIViewController {
+    // MARK: - Properties
+
     let circleImageView: UIImageView = {
         let imageView = UIImageView(image: circleImage)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
         return imageView
     }()
-    
+
     let circleView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -23,18 +25,14 @@ class SplashScreenViewController: UIViewController {
         view.clipsToBounds = true
         return view
     }()
-    
+
     static let circleImage = Images.image(for: .circle)
 
     let forkImage: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = Images.image(for: .fork)
-//        imageView.backgroundColor = .blue
         imageView.contentMode = .scaleAspectFit
-//        imageView.layer.cornerRadius = 8
-//        imageView.clipsToBounds = true
-//        imageView.isUserInteractionEnabled = true
         return imageView
     }()
 
@@ -42,26 +40,21 @@ class SplashScreenViewController: UIViewController {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = Images.image(for: .spoon)
-//        imageView.backgroundColor = .systemPink
         imageView.contentMode = .scaleAspectFit
-//        imageView.layer.cornerRadius = 8
-//        imageView.clipsToBounds = true
-//        imageView.isUserInteractionEnabled = true
         return imageView
     }()
 
     let appNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.alpha = 0
         label.text = "Ciao!"
         label.font = Fonts.font(for: .title1)
         label.textColor = Colors.color(for: .black)
         return label
 
     }()
-    
-    var logoIsHidden: Bool = false
+
+    // MARK: - View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,11 +63,7 @@ class SplashScreenViewController: UIViewController {
         setupConstraints()
     }
 
-//    override func viewDidLayoutSubviews() {
-//        appNameLabel.transform = CGAffineTransform(translationX: 0, y: 10)
-//        UIView.animate(withDuration: 0.2) { self.appNameLabel.transform = .identity }
-        
-//    }
+    // MARK: - Setup
 
     private func setupView() {
         view.backgroundColor = Colors.color(for: .lightLimeGreen)
@@ -91,7 +80,7 @@ class SplashScreenViewController: UIViewController {
             circleView.widthAnchor.constraint(equalToConstant: 140),
             circleView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             circleView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -36),
-            
+
             circleImageView.heightAnchor.constraint(equalToConstant: 140),
             circleImageView.widthAnchor.constraint(equalToConstant: 140),
             circleImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),

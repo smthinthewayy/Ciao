@@ -16,15 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         splashScreenPresenter?.present()
 
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = ViewController()
+        window?.makeKeyAndVisible()
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.splashScreenPresenter?.dismiss(completion: { [weak self] in
                 self?.splashScreenPresenter = nil
             })
         }
 
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = ViewController()
-        window?.makeKeyAndVisible()
         return true
     }
 }
