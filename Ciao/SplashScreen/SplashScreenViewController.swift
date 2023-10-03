@@ -8,16 +8,25 @@
 import UIKit
 
 class SplashScreenViewController: UIViewController {
-    private let circleView: UIView = {
+    let circleImageView: UIImageView = {
+        let imageView = UIImageView(image: circleImage)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        return imageView
+    }()
+    
+    let circleView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = Colors.color(for: .white)
-        view.layer.cornerRadius = 140 / 2
+        view.backgroundColor = .clear
+        view.layer.cornerRadius = 70
         view.clipsToBounds = true
         return view
     }()
+    
+    static let circleImage = Images.image(for: .circle)
 
-    private let forkImage: UIImageView = {
+    let forkImage: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = Images.image(for: .fork)
@@ -29,7 +38,7 @@ class SplashScreenViewController: UIViewController {
         return imageView
     }()
 
-    private let spoonImage: UIImageView = {
+    let spoonImage: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = Images.image(for: .spoon)
@@ -41,7 +50,7 @@ class SplashScreenViewController: UIViewController {
         return imageView
     }()
 
-    private let appNameLabel: UILabel = {
+    let appNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.alpha = 0
@@ -51,6 +60,8 @@ class SplashScreenViewController: UIViewController {
         return label
 
     }()
+    
+    var logoIsHidden: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,28 +70,18 @@ class SplashScreenViewController: UIViewController {
         setupConstraints()
     }
 
-    override func viewDidLayoutSubviews() {
+//    override func viewDidLayoutSubviews() {
 //        appNameLabel.transform = CGAffineTransform(translationX: 0, y: 10)
 //        UIView.animate(withDuration: 0.2) { self.appNameLabel.transform = .identity }
-        UIView.animate(withDuration: 0.2) { self.appNameLabel.alpha = 1 }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            UIView.animate(withDuration: 0.4) {
-                self.spoonImage.transform = CGAffineTransform(translationX: 0, y: 120)
-            }
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.65) {
-            UIView.animate(withDuration: 0.4) {
-                self.forkImage.transform = CGAffineTransform(translationX: 0, y: 120)
-            }
-        }
-    }
+        
+//    }
 
     private func setupView() {
         view.backgroundColor = Colors.color(for: .lightLimeGreen)
     }
 
     private func setupSubviews() {
-        view.addSubviews([circleView, appNameLabel])
+        view.addSubviews([circleImageView, circleView, appNameLabel])
         circleView.addSubviews([forkImage, spoonImage])
     }
 
@@ -90,6 +91,11 @@ class SplashScreenViewController: UIViewController {
             circleView.widthAnchor.constraint(equalToConstant: 140),
             circleView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             circleView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -36),
+            
+            circleImageView.heightAnchor.constraint(equalToConstant: 140),
+            circleImageView.widthAnchor.constraint(equalToConstant: 140),
+            circleImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            circleImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -36),
 
             forkImage.widthAnchor.constraint(equalToConstant: 28),
             spoonImage.widthAnchor.constraint(equalToConstant: 32.7),

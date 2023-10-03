@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7104D1EF2AC72AA90019296A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7104D1EE2AC72AA90019296A /* SceneDelegate.swift */; };
 		7104D1F12AC72AA90019296A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7104D1F02AC72AA90019296A /* ViewController.swift */; };
 		7104D1F62AC72AAA0019296A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7104D1F52AC72AAA0019296A /* Assets.xcassets */; };
 		7104D1F92AC72AAA0019296A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7104D1F72AC72AAA0019296A /* LaunchScreen.storyboard */; };
@@ -35,6 +34,7 @@
 		718629582ACB3DEE0097036A /* PTRootUI-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7186294E2ACB3DEE0097036A /* PTRootUI-Bold.ttf */; };
 		718629592ACB3DEE0097036A /* PTRootUI-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7186294E2ACB3DEE0097036A /* PTRootUI-Bold.ttf */; };
 		7186295A2ACB3DEE0097036A /* PTRootUI-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7186294E2ACB3DEE0097036A /* PTRootUI-Bold.ttf */; };
+		719DEE792ACC3BB600BC686B /* SplashScreenAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DEE782ACC3BB600BC686B /* SplashScreenAnimator.swift */; };
 		71F0BE4A2ACB2F220078CA09 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F0BE492ACB2F220078CA09 /* Images.swift */; };
 		71F0BE4C2ACB2F6C0078CA09 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F0BE4B2ACB2F6C0078CA09 /* Colors.swift */; };
 		71F0BE4E2ACB2FFE0078CA09 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F0BE4D2ACB2FFE0078CA09 /* Fonts.swift */; };
@@ -60,7 +60,6 @@
 
 /* Begin PBXFileReference section */
 		7104D1E92AC72AA90019296A /* Ciao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ciao.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7104D1EE2AC72AA90019296A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7104D1F02AC72AA90019296A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7104D1F52AC72AAA0019296A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7104D1F82AC72AAA0019296A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		7186294C2ACB3DEE0097036A /* PTRootUI-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTRootUI-Regular.ttf"; sourceTree = "<group>"; };
 		7186294D2ACB3DEE0097036A /* PTRootUI-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTRootUI-Medium.ttf"; sourceTree = "<group>"; };
 		7186294E2ACB3DEE0097036A /* PTRootUI-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTRootUI-Bold.ttf"; sourceTree = "<group>"; };
+		719DEE782ACC3BB600BC686B /* SplashScreenAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenAnimator.swift; sourceTree = "<group>"; };
 		71F0BE492ACB2F220078CA09 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		71F0BE4B2ACB2F6C0078CA09 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		71F0BE4D2ACB2FFE0078CA09 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -173,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				7148A8182ACB020600F3ACC7 /* AppDelegate.swift */,
-				7104D1EE2AC72AA90019296A /* SceneDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -184,6 +183,7 @@
 				7104D1F72AC72AAA0019296A /* LaunchScreen.storyboard */,
 				7148A80C2ACAFDA700F3ACC7 /* SplashScreenViewController.swift */,
 				7148A8102ACAFE1800F3ACC7 /* SplashScreenPresenter.swift */,
+				719DEE782ACC3BB600BC686B /* SplashScreenAnimator.swift */,
 			);
 			path = SplashScreen;
 			sourceTree = "<group>";
@@ -356,9 +356,9 @@
 				7104D1F12AC72AA90019296A /* ViewController.swift in Sources */,
 				71F0BE4C2ACB2F6C0078CA09 /* Colors.swift in Sources */,
 				7148A80D2ACAFDA700F3ACC7 /* SplashScreenViewController.swift in Sources */,
+				719DEE792ACC3BB600BC686B /* SplashScreenAnimator.swift in Sources */,
 				7148A8192ACB020600F3ACC7 /* AppDelegate.swift in Sources */,
 				71F0BE522ACB36A20078CA09 /* UIView.swift in Sources */,
-				7104D1EF2AC72AA90019296A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
